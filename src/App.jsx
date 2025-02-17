@@ -16,7 +16,12 @@ class App extends Component {
       .then((Response) => Response.json())
       .then((users) => 
        this.setState(
-        
+        () => {
+          return {monsters: users};
+        },
+        () => {
+          console.log(this.state);
+        }
        )
       )
   }
